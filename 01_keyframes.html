@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        .box {
+            background: #fff;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            animation-name: animation2;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            /*animation-delay: 2s;*/
+            animation-direction: alternate;
+            animation-timing-function:ease-in; ;
+        }
+        @keyframes animation1{
+            from {
+                left: 0;
+            }
+            to {
+                left: 880px;
+            }
+
+        }
+        @keyframes animation2{
+            0%{
+                top: 0;
+                left: 0;
+                border-radius: 0 0 0 0;
+                background-color: #fff;
+            }
+            25%{
+                top: 0;
+                left: 880px;
+                border-radius: 50% 0 0 0;
+                background-color: red;
+            }
+            50% {
+                top: 	200px;
+                left: 880px;
+                border-radius: 50% 50% 0 0;
+                background-color: blue;
+
+            }
+            75% {
+                top: 	200px;
+                left: 0px;
+                border-radius: 50% 50% 50% 0;
+                background-color: green;
+
+            }
+            100% {
+                top: 	0px;
+                left: 0px;
+                border-radius: 50% 50% 50% 50%;
+                background-color: #fff;
+
+            }
+        }
+        h1 {
+            position: relative;
+            animation-name: animation2;
+            animation-duration: 10s;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <h1>Hello animation</h1>
+</body>
+</html>
