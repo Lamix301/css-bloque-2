@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores combinados</title>
+    <style>
+        /*Selector descendiente*/
+        div p {
+            color: blue;
+        }
+        /*Si div es padre directo de p*/
+        div > p {
+            color: orange;
+        }
+        /*Si p es el hermano que sigue a div*/
+        div + p{
+            color: red;
+        }
+        /*Todos los párrafos siguientes a ul que tengan el mismo padre*/
+        div ~  p {
+            color: green;
+        }
+        /*Selectores de atributos*/
+        a[target] {
+            background-color:brown;
+        }
+        input[required] {
+            background-color: blueviolet;
+        }
+        input [type="text"] 
+        input [type="email"]{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <P>Párrafo antes del div</P>
+    <div>
+        <p>Primer párrafo dentro de un div</p>
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2<p>Párrafo dentro de Elemento 2</p></li>
+            <li>Elemento 3</li>
+        </ul>
+        <p>Segundo párrafo dentro del div</p>
+        <p>Tercer párrafo dentro del div</p>
+    </div>
+    <p>Primer párrafo fuera del div</p>
+    <p>Otro párrafo fuera del div</p>
+    <a href="#">Página 1</a><br>
+    <a href="pagina2.html">Página 2</a><br>
+    <a href="http://google.es" target="_blank">Ir a google</a>
+    <br>
+    <br>
+    <form action="#">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Email">
+        <input type="submit" placeholder="Enviar">
+    </form>
+</body>
+</html>
